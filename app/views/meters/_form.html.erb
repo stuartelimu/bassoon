@@ -1,0 +1,22 @@
+<%= form_with(model: meter) do |form| %>
+  <% if meter.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(meter.errors.count, "error") %> prohibited this meter from being saved:</h2>
+
+      <ul>
+        <% meter.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :meter_number, style: "display: block" %>
+    <%= form.text_field :meter_number %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @meter %>
+
+<div>
+  <%= link_to "Edit this meter", edit_meter_path(@meter) %> |
+  <%= link_to "Back to meters", meters_path %>
+
+  <%= button_to "Destroy this meter", @meter, method: :delete %>
+</div>
